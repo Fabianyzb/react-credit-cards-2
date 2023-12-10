@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Cards from "react-credit-cards-2";
 import "react-credit-cards-2/dist/es/styles-compiled.css";
-import "./PaymentForm.css"; // Agrega tu archivo de estilos aquí
+import "./PaymentForm.css";
 
 const PaymentForm = () => {
   const [state, setState] = useState({
@@ -15,7 +15,7 @@ const PaymentForm = () => {
   const handleInputChange = (evt) => {
     const { name, value } = evt.target;
 
-    // Ajustar la lógica para limitar la entrada del usuario en los campos específicos
+    // Lógica para limitar la entrada del usuario en los campos específicos
     if (
       (name === "number" && value.length > 16) ||
       (name === "expiry" && value.length > 4) ||
@@ -88,7 +88,6 @@ const PaymentForm = () => {
             onFocus={handleInputFocus}
           />
         </div>
-        {/* ... Otros campos del formulario ... */}
       </form>
     </div>
   );
